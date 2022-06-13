@@ -42,7 +42,7 @@ Start script with public host url of server and follow instructions.
 ./initialize_openvpn.sh [host_url]
 ```
 
-After that, server will start listening on port 1119
+After that, server will start listening on port 1194
 
 ### Adding new users
 
