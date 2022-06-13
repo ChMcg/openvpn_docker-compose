@@ -1,9 +1,18 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-set -x
+host_url="${1}"
+
+if [[ -z "${host_url}" ]]
+then
+    echo "empty host_url"
+    exit -1
+fi
 
 [ ! -d "data" ] && mkdir data
 
-docker compose run --rm openvpn ovpn_genconfig -u udp://inelos.xyz \
+
+set -x
+
+docker compose run --rm openvpn ovpn_genconfig -u udp://${host_url} \
     && docker compose run --rm openvpn ovpn_initpki \
     && docker compose up -d
