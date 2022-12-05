@@ -8,7 +8,7 @@ Automation of OpenVPN server deploy and users creation.
 
 ### Docker and docker-compose install
 
-Note: tested only on ubuntu-based OS.
+Note: tested only on debian-based OS.
 
 ```shell
 sudo apt update \
